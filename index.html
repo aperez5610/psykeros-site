@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Psykeros — Consultorio de Psicología | Psi. María De Jesús Pérez Martínez</title>
+  <meta name="description" content="Psykeros - Consultorio de psicología con atención profesional por la Psi. María De Jesús Pérez Martínez. Terapia individual, familiar y apoyo emocional.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="assets/images/logo.png">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><img src="assets/images/logo.png" style="max-width: 50px; background-color: #ffffff;" alt="Psykeros" />Psykeros</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="about.html" data-i18n="nav_about">Quién soy</a>
+        <a href="Gallery.html" data-i18n="nav_about">Galeria</a>
+        <a href="services.html" data-i18n="nav_services">Servicios</a>
+        <a href="appointments.html" data-i18n="nav_appointments">Reservar cita</a>
+        <a href="contact.html" data-i18n="nav_contact">Contacto</a>
+      </nav>
+      <div class="header-actions">
+        <select id="langSwitch" aria-label="Cambiar idioma">
+          <option value="es">ES</option>
+          <option value="en">EN</option>
+        </select>
+        <button class="cta" id="bookNowBtn" onclick="location.href='appointments.html'"><span data-i18n="cta_book">Reservar cita</span></button>
+        <button class="main-nav" onclick="location.href='https://www.facebook.com/share/17HmUd1niY/'">
+          <img src="assets/images/facebook.png" style="max-width: 30px" alt="Facebook">
+           <button class="main-nav" onclick="location.href='https://api.whatsapp.com/send?phone=5218787023641&text=Hola%20Psykeros%21%20Necesito%20ayuda'">
+          <img src="assets/images/whatsapp.png" style="max-width: 30px" alt="WhatsApp">
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1 data-i18n="hero_title">Psykeros — Tu bienestar emocional</h1>
+          <p data-i18n="hero_sub">Atención profesional y personalizada con la Psi. María De Jesús Pérez Martínez. Terapia individual, familiar y herramientas para mejorar tu calidad de vida.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="appointments.html" data-i18n="hero_cta">Reservar una consulta</a>
+            <a class="btn btn-outline" href="contact.html" data-i18n="hero_learn">Más información</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="assets/images/hero.png" alt="" role="presentation">
+        </div>
+      </div>
+    </section>
+
+    <section class="services-preview container">
+      <h2 data-i18n="services_title">Servicios</h2>
+      <div class="cards">
+        <article class="card">
+          <img src="assets/images/orientacion vocacional.jpg" alt="" role="presentation">
+          <h3 data-i18n="svc_individual">Orientacion Vocacional</h3>
+          <p data-i18n="svc_individual_p">Aplicacion de pruebas psicologicascon la finalidad de orientar la eleccion de la carrera profecional.</p>
+        </article>
+        <article class="card">
+          <img src="assets/images/evaluacion clinica a adultos.jpg" alt="" role="presentation">
+          <h3 data-i18n="svc_family">Evaluacion clinica a adultos</h3>
+          <p data-i18n="svc_family_p">Atención personalizada para ansiedad, depresión, estrés y crecimiento personal.</p>
+        </article>
+        <article class="card">
+          <img src="assets/images/porte armas.jpg" alt="" role="presentation">
+          <h3 data-i18n="svc_couples">Evaluacion de portacion de armas</h3>
+          <p data-i18n="svc_couples_p">Certificado psicologico de salud mental para tramitar la licencia particular individual de portacion de armas de fuego.</p>
+        </article>
+        <article class="card">
+          <img src="assets/images/supervicion de casos clinicos.jpg" alt="" role="presentation">
+          <h3 data-i18n="svc_family">Supervicion de casos clinicos</h3>
+          <p data-i18n="svc_family_p">Formulacion de casos clinicos, planificacion de la evaluacion, definicion de intervencion.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="about-teaser container">
+      <div class="about-grid">
+        <div>
+          <h2 data-i18n="about_title">Conoce a la Psi. María de Jesus</h2>
+          <p data-i18n="about_p">Soy la Psi. María De Jesús Pérez Martínez, psicóloga clínica con experiencia en intervenciones cognitivas y terapias basadas en evidencia. Mi enfoque combina empatía, herramientas prácticas y respeto por tu ritmo.</p>
+          <a href="about.html" class="link" data-i18n="about_more">Ver más sobre mí →</a>
+        </div>
+        <div class="team-image">
+          <img src="assets/images/doctora.jpg" alt="Psi. María De Jesús Pérez Martínez">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>Psykeros</strong>
+        <p data-i18n="footer_address">Consultorio de Psicología</p>
+      </div>
+      <div>
+        <a style="color:white" href="contact.html" data-i18n="nav_contact">Contacto</a>
+        <a style="color: white;"href="appointments.html" data-i18n="nav_appointments">Reservar cita,</a>
+      </div>
+      <div>
+        <p>© <span id="year"></span> Psykeros</p>
+        <p><a style="color: white" href="https://www.facebook.com/" target="_blank" rel="noopener"><img src="assets/images/facebook.png" style="max-width: 30px" alt="Facebook"></a>
+        <a href="https://api.whatsapp.com/send?phone=5218787023641&text=Hola%20Psykeros%21%20Necesito%20ayuda" target="_blank" rel="noopener"><img src="assets/images/whatsapp.png" style="max-width: 30px" alt="whatsapp"></a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/translations.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

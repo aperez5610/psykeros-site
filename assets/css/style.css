@@ -1,0 +1,66 @@
+:root{
+  --brand-a: #03AEF1; /* primary */
+  --brand-b: #3B758C; /* deep */
+  --accent: #05F2B4;  /* accent */
+  --warn: #F45242;    /* warn */
+  --dark: #BF1738;    /* strong */
+  --bg: #ffffff;
+  --muted: #6b6b6b;
+  --radius: 12px;
+  --container: 1100px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:#222}
+.container{max-width:var(--container);margin:0 auto;padding:1rem}
+.gallery-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:10px;}
+.map{width:100%; height:320px; border-radius:12px; overflow:hidden;}
+
+
+/* Header */
+.site-header{background:linear-gradient(90deg,var(--brand-a),var(--brand-b));color:#fff;position:sticky;top:0;z-index:30}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:.75rem 1rem}
+.brand{font-weight:700;color:#fff;text-decoration:none;font-size:1.25rem}
+.main-nav a{margin:0 .6rem;color:rgba(255,255,255,0.95);text-decoration:none}
+.header-actions{display:flex;gap:.5rem;align-items:center}
+.header-actions select{padding:.35rem;border-radius:8px;border:0;background:#fff}
+.cta{background:var(--dark);color:#fff;border-radius:10px;padding:.5rem .75rem;border:0}
+
+/* Hero */
+.hero{padding:2rem 0}
+.hero-grid{display:grid;grid-template-columns:1fr 420px;gap:2rem;align-items:center}
+.hero-text h1{font-size:2rem;color:var(--brand-b);margin:0 0 .5rem}
+.hero-text p{color:var(--muted);margin:0 0 1rem}
+.btn{display:inline-block;padding:.6rem .9rem;border-radius:10px;text-decoration:none}
+.btn-primary{background:var(--brand-a);color:#fff}
+.btn-outline{background:transparent;border:2px solid var(--brand-b);color:var(--brand-b)}
+.hero-image img{width:100%;height:auto;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.08)}
+
+.services-preview{padding:2rem 0}
+.cards{display:flex;gap:1rem;flex-wrap:wrap}
+.card{background:#fff;border-radius:12px;padding:1rem;flex:1;min-width:220px;box-shadow:0 6px 18px rgba(0,0,0,0.05)}
+.card img{width:100%;Height:320px;object-fit:cover;border-radius:8px}
+
+/* About teaser */
+.about-teaser{padding:2rem 0}
+.about-grid{display:grid;grid-template-columns:1fr 320px;gap:1.5rem;align-items:center}
+.team-image img{width:100%;border-radius:12px;}
+
+/* Booking & forms */
+.booking-options{display:flex;gap:1rem;flex-wrap:wrap}
+.booking-card{flex:1;min-width:240px;background:#fff;padding:1rem;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.05)}
+.booking-form form{display:grid;gap:.6rem}
+.booking-form input, .booking-form select, .booking-form textarea{padding:.6rem;border-radius:8px;border:1px solid #e6e6e6}
+
+/* Footer */
+.site-footer{background:#0f1720;color:#fff;padding:1.25rem 0;margin-top:2rem}
+.footer-grid{display:flex;justify-content:space-between;gap:1rem;align-items:center}
+
+/* Responsive */
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+  .about-grid{grid-template-columns:1fr}
+  .footer-grid{flex-direction:column;align-items:flex-start}
+  .main-nav{display:none}
+}

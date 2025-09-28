@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contacto — Psykeros</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="assets/images/logo.png">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><img src="assets/images/logo.png" style="max-width: 50px; background-color: #ffffff;" alt="Psykeros" />Psykeros</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="about.html" data-i18n="nav_about">Quién soy</a>
+        <a href="Gallery.html" data-i18n="nav_about">Galeria</a>
+        <a href="services.html" data-i18n="nav_services">Servicios</a>
+        <a href="appointments.html" data-i18n="nav_appointments">Reservar cita</a>
+        <a href="contact.html" data-i18n="nav_contact">Contacto</a>
+      </nav>
+      <div class="header-actions">
+        <select id="langSwitch" aria-label="Cambiar idioma">
+          <option value="es">ES</option>
+          <option value="en">EN</option>
+        </select>
+        <button class="cta" id="bookNowBtn" onclick="location.href='appointments.html'"><span data-i18n="cta_book">Reservar cita</span></button>
+        <button class="main-nav" onclick="location.href='https://www.facebook.com/share/17HmUd1niY/'">
+          <img src="assets/images/facebook.png" style="max-width: 30px" alt="Facebook">
+           <button class="main-nav" onclick="location.href='https://api.whatsapp.com/send?phone=5218787023641&text=Hola%20Psykeros%21%20Necesito%20ayuda'">
+          <img src="assets/images/whatsapp.png" style="max-width: 30px" alt="WhatsApp">
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container contact-page">
+    <h1 data-i18n="contact_title">Contacto</h1>
+    <div class="contact-grid">
+      <div>
+        <h2 data-i18n="contact_info">Información</h2>
+        <p><strong>Email:</strong> <a href="mailto:consulta@psykeros.us">consulta@psykeros.us</a></p>
+        <p><strong>Teléfono Mx:</strong> <a href="tel:+5218787023641">+52 878 702 3641</a></p>
+        <p><strong>Teléfono US:</strong> <a href="tel:+18300000000">+1 830 000 0000</a></p>
+        <p><strong>Dirección:</strong> C. Matamoros 500 b-Piso 3, Zona Centro, 26000 Piedras Negras, Coah.</p>
+        <p><strong>Horario:</strong> Lun–Vie 9:00–18:00</p>
+        <p><a href="https://www.facebook.com/share/17HmUd1niY/" target="_blank" rel="noopener"><img src="assets/images/facebook.png" style="max-width: 30px" alt="Facebook"></a>
+        <a href="https://api.whatsapp.com/send?phone=5218787023641&text=Hola%20Psykeros%21%20Necesito%20ayuda" target="_blank" rel="noopener"><img src="assets/images/whatsapp.png" style="max-width: 30px" alt="whatsapp"></a></p>
+        <p><strong>Dejanos tu reseña:</strong></p>
+        <p><a href="https://g.page/r/CapQJbTzp5FTEAE/review" target="_blank" rel="noopener"><img src="assets/images/maps.png" style="max-width: 30px" alt="Facebook"></a></p>
+      </div>
+      <div>
+        <h2 data-i18n="contact_form">Envíanos un mensaje</h2>
+        <form id="contactForm" onsubmit="handleContactForm(event)">
+          <div></div>
+          <label for="cname" data-i18n="form_name">Nombre</label>
+          <input id="cname" name="name" required>
+          <div></div>
+
+          <label for="cemail" data-i18n="form_email">Correo</label>
+          <input id="cemail" name="email" type="email" required>
+          <div></div>
+
+          <label for="cmsg" data-i18n="form_msg">Mensaje</label>
+          <textarea id="cmsg" name="message" rows="4"></textarea>
+          <div></div>
+
+          <button class="btn btn-primary" type="submit" data-i18n="form_submit">Enviar</button>
+        </form>
+         <h2 data-i18n>Ubicacion</h2>
+  <div class="map" style="margin-top:12px;">
+    <iframe width="100%" height="100%" frameborder="0" style="border:0"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.503021803098!2d-100.51911621271255!3d28.70450951797418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x865f8d776bf8c033%3A0x5391a7f3b42550aa!2sPsykeros!5e0!3m2!1ses-419!2smx!4v1759082600540!5m2!1ses-419!2smx" allowfullscreen>
+    </iframe>
+  </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer container">
+    <div class="container footer-grid">
+      <div>
+        <strong>Psykeros</strong>
+        <p data-i18n="footer_address">Consultorio de Psicología</p>
+      </div>
+      <div>
+        <a style="color:white" href="contact.html" data-i18n="nav_contact">Contacto</a>
+        <a style="color: white;"href="appointments.html" data-i18n="nav_appointments">Reservar cita,</a>
+      </div>
+      <div>
+        <p>© <span id="year"></span> Psykeros</p>
+        <p><a style="color: white" href="https://www.facebook.com/" target="_blank" rel="noopener"><img src="assets/images/facebook.png" style="max-width: 30px" alt="Facebook"></a>
+        <a href="https://api.whatsapp.com/send?phone=5218787023641&text=Hola%20Psykeros%21%20Necesito%20ayuda" target="_blank" rel="noopener"><img src="assets/images/whatsapp.png" style="max-width: 30px" alt="whatsapp"></a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/translations.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

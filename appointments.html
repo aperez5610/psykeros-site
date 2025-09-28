@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Reservar cita — Psykeros</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="assets/images/logo.png">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><img src="assets/images/logo.png" style="max-width: 50px; background-color: #ffffff;" alt="Psykeros" />Psykeros</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="about.html" data-i18n="nav_about">Quién soy</a>
+        <a href="Gallery.html" data-i18n="nav_about">Galeria</a>
+        <a href="services.html" data-i18n="nav_services">Servicios</a>
+        <a href="appointments.html" data-i18n="nav_appointments">Reservar cita</a>
+        <a href="contact.html" data-i18n="nav_contact">Contacto</a>
+      </nav>
+      <div class="header-actions">
+        <select id="langSwitch" aria-label="Cambiar idioma">
+          <option value="es">ES</option>
+          <option value="en">EN</option>
+        </select>
+        <button class="cta" id="bookNowBtn" onclick="location.href='appointments.html'"><span data-i18n="cta_book">Reservar cita</span></button>
+        <button class="main-nav" onclick="location.href='https://www.facebook.com/share/17HmUd1niY/'">
+          <img src="assets/images/facebook.png" style="max-width: 30px" alt="Facebook">
+           <button class="main-nav" onclick="location.href='https://api.whatsapp.com/send?phone=5218787023641&text=Hola%20Psykeros%21%20Necesito%20ayuda'">
+          <img src="assets/images/whatsapp.png" style="max-width: 30px" alt="WhatsApp">
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 data-i18n="appointments_title">Reservar cita</h1>
+    <p data-i18n="appointments_intro">Selecciona una opción de reserva:</p>
+
+    <div class="booking-options">
+      <div class="booking-card">
+        <h3 data-i18n="option_online">Consulta online</h3>
+        <p data-i18n="option_online_p">Videollamada segura (Google Meet).</p>
+        <a class="btn btn-primary" href="#requestForm" onclick="llenarTexto()">Reservar online</a>
+      </div>
+      <script>
+function llenarTexto() {
+  // 1. Selecciona el área de texto por su ID
+  var textarea = document.getElementById("msg");
+  // 2. Asigna el texto deseado a su propiedad 'value'
+  textarea.value = "¡Solicitud de consulta Online!";
+}
+</script>
+
+      <div class="booking-card">
+        <h3 data-i18n="option_inperson">Presencial</h3>
+        <p data-i18n="option_inperson_p">En Consultorio.</p>
+        <a class="btn btn-primary" href="#requestForm" data-i18n="book_inperson">Solicitar cita</a>
+      </div>
+    </div>
+
+    <section id="requestForm" class="booking-form">
+      <h2 data-i18n="request_form_title">Solicitud de cita</h2>
+      <form id="appointmentForm" onsubmit="handleAppointmentForm(event)">
+        <label for="name" data-i18n="form_name">Nombre completo</label>
+        <input id="name" name="name" required>
+
+        <label for="email" data-i18n="form_email">Correo electrónico</label>
+        <input id="email" name="email" type="email" required>
+
+        <label for="type" data-i18n="form_type">Tipo de sesión</label>
+        <select id="type" name="type">
+          <option value="online" data-i18n="opt_online">Online</option>
+          <option value="inperson" data-i18n="opt_inperson">Presencial</option>
+        </select>
+
+        <label for="date" data-i18n="form_date">Fecha estimada</label>
+        <input id="date" name="date" type="date">
+
+        <label for="msg" data-i18n="form_msg">Comentario</label>
+        <textarea id="msg" name="msg" rows="4"></textarea>
+
+        <button class="btn btn-primary" type="submit" data-i18n="form_submit">Enviar solicitud</button>
+      </form>
+      <p class="note" data-i18n="form_note">Te contactaremos para confirmar la cita y los detalles de pago si aplica.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+   <div class="container footer-grid">
+      <div>
+        <strong>Psykeros</strong>
+        <p data-i18n="footer_address">Consultorio de Psicología</p>
+      </div>
+      <div>
+        <a style="color:white" href="contact.html" data-i18n="nav_contact">Contacto</a>
+        <a style="color: white;"href="appointments.html" data-i18n="nav_appointments">Reservar cita,</a>
+      </div>
+      <div>
+        <p>© <span id="year"></span> Psykeros</p>
+        <p><a style="color: white" href="https://www.facebook.com/" target="_blank" rel="noopener"><img src="assets/images/facebook.png" style="max-width: 30px" alt="Facebook"></a>
+        <a href="https://api.whatsapp.com/send?phone=5218787023641&text=Hola%20Psykeros%21%20Necesito%20ayuda" target="_blank" rel="noopener"><img src="assets/images/whatsapp.png" style="max-width: 30px" alt="whatsapp"></a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/translations.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
