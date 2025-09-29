@@ -2,6 +2,7 @@ const TRANSLATIONS = {
   es: {
     nav_about: "Quién soy",
     nav_services: "Servicios",
+    nav_gallery: "Galería",
     nav_appointments: "Reservar cita",
     nav_contact: "Contacto",
     cta_book: "Reservar cita",
@@ -52,10 +53,11 @@ const TRANSLATIONS = {
   en: {
     nav_about: "About",
     nav_services: "Services",
-    nav_appointments: "Book",
+    nav_gallery: "Gallery",
+    nav_appointments: "Book appoinment",
     nav_contact: "Contact",
     cta_book: "Book appointment",
-    hero_title: "Psykeros — Your emotional well-being",
+    hero_title: "Psykeros — Your emotional wellbeing",
     hero_sub: "Professional, personalized care with Dr. María De Jesús Pérez Martínez.",
     hero_cta: "Book a consultation",
     hero_learn: "Learn more",
